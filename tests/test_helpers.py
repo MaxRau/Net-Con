@@ -4,9 +4,8 @@ import mock
 import lxml
 import pytest
 
-@mock.patch('manager.connect')
+#@mock.patch('manager.connect')
 def test_get_running_config():
-    manager.connect.return_value = ''
-    config = get_running_config('127.0.0.1', 'admin', 'admin', {'name':'junos'})
-    assert isinstance(config, lxml.etree)
-    assert config == 10
+    #manager.connect.return_value = ''
+    config = get_running_config('138.120.48.30', '830', 'admin', 'Alcatel', {'name':'junos'})
+    assert isinstance(config, lxml.etree._Element)
