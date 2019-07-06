@@ -1,5 +1,5 @@
-from netcon.helpers import get_running_config
-from netcon.simulator import run_simulator
+from libs.helpers import get_running_config
+from libs.simulator import run_simulator
 import lxml
 
 config = get_running_config('127.0.0.1', 'admin', 'admin', {'name':'junos'})
